@@ -2,7 +2,7 @@
 
 Low level rfc2822 message composer that streams output. Define your own mime tree, no magic included.
 
-Ported from [MailBuild](https://github.com/whiteout-io/mailbuild) of the [emailjs.org](http://emailjs.org/) project. Subsequently forked from [buildmail](git://github.com/andris9/buildmail.git). This version provides a slightly more low-level approach to composing messages allowing the user to bypass a few of the conventions baked in to the original.  
+Ported from [MailBuild](https://github.com/whiteout-io/mailbuild) of the [emailjs.org](http://emailjs.org/) project. Subsequently forked from [buildmail](https://github.com/nodemailer/buildmail). This version provides a slightly more low-level approach to composing messages allowing the user to bypass a few of the conventions baked in to the original.  
 
 
 ## Usage
