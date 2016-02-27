@@ -1,8 +1,8 @@
 {
   "name": "buildmail",
-  "version": "3.5.1",
-  "description": "buildmail is a low level rfc2822 message composer. Define your own mime tree, no magic included.",
-  "author": "Andris Reinman <andris@kreata.ee>",
+  "version": "3.5.2",
+  "description": "buildmail is a low level rfc2822 message composer. Define your own mime tree, no magic included. Forked from git://github.com/andris9/buildmail.git. This version allows for a somewhat ham-fisted approach to creating the email, allowing the creator to bypass some of the composition protections built in to the original.",
+  "author": "Dan Nielsen <dnielsen@reachmail.com>",
   "keywords": [
     "RFC2822",
     "mime"
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/andris9/buildmail.git"
+    "url": "https://github.com/danielsen/buildmail"
   },
   "main": "lib/buildmail",
   "dependencies": {

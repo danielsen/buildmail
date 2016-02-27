@@ -2,16 +2,14 @@
 
 Low level rfc2822 message composer that streams output. Define your own mime tree, no magic included.
 
-Ported from [MailBuild](https://github.com/whiteout-io/mailbuild) of the [emailjs.org](http://emailjs.org/) project. This port uses similar API but is for Node only and streams the output.
+Ported from [MailBuild](https://github.com/whiteout-io/mailbuild) of the [emailjs.org](http://emailjs.org/) project. Subsequently forked from [buildmail](git://github.com/andris9/buildmail.git). This version provides a slightly more low-level approach to composing messages allowing the user to bypass a few of the conventions baked in to the original.  
 
-[![Build Status](https://secure.travis-ci.org/nodemailer/buildmail.svg)](http://travis-ci.org/nodemailer/buildmail)
-<a href="http://badge.fury.io/js/buildmail"><img src="https://badge.fury.io/js/buildmail.svg" alt="NPM version" height="18"></a>
 
 ## Usage
 
 Install with npm
 
-    npm install buildmail
+    npm install . 
 
 Require in your scripts
 
@@ -305,7 +303,7 @@ Sets body content for current node. If the value is a string and Content-Type is
 If the value is a Buffer or a Stream you need to specify the charset yourself.
 
 ```javascript
-node.setContent(body)
+node.setContent(body, bypass)
 ```
 
 Where
@@ -316,6 +314,9 @@ If the value is an object, it should include one of the following properties
 
   * **path** - path to a file that will be used as the content
   * **href** - URL that will be used as the content
+
+  * **bypass** - *bool*
+If bypass is true quoted-printable or base64 encoding will be skipped for this payload. It effectively allows you to set raw content to the payload and can be thought of as a simplified version of the setRaw method.
 
 **Example**
 
